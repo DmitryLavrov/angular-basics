@@ -1,10 +1,21 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+
+export interface Post {
+  title: string
+  text: string
+  id?: number
+}
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'angular-basics';
+  posts: Post[] = [
+    {title: 'Хочу выучить Angular', text: 'Я все еще учу Angular'},
+    {title: 'Хочу выучить следующий блок', text: 'Я почти начал его учить'},
+  ];
+
 }
+
