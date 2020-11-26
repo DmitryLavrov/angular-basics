@@ -17,5 +17,9 @@ export class AppComponent {
     {title: 'Хочу выучить следующий блок', text: 'Я почти начал его учить'},
   ];
 
+  updatePosts(post: Post) {
+    this.posts.unshift(post)
+    console.log("Post", post);
+  }
 }
 
