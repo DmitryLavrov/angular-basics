@@ -1,5 +1,9 @@
 import {Component} from '@angular/core';
 
+export interface Posts {
+  title: String,
+  text: String
+}
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,17 +11,14 @@ import {Component} from '@angular/core';
 })
 
 export class AppComponent {
-  float: Number = 0.42
 
-  obj = {
-    a: 1,
-    b: {
-      c: 2,
-      d: {
-        e:3,
-        f:4
-      }
-    }
-  }
+  search = ''
+  searchField = 'title'
+
+  posts: Posts[] = [
+    {title: 'Заголовок 1', text: 'Текст 3'},
+    {title: 'Текст 2', text: 'Текст 1'},
+    {title: 'Заголовок 3', text: 'Заголовок 2'},
+  ]
 }
 
