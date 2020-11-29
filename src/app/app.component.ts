@@ -7,6 +7,6 @@ import {Component} from '@angular/core';
 })
 
 export class AppComponent {
-  isVisible = true
+  e: number = Math.E
 }
 
