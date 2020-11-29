@@ -7,6 +7,6 @@ import {Component} from '@angular/core';
 })
 
 export class AppComponent {
-  str: String = 'hello world'
+  date: Date = new Date()
 }
 
