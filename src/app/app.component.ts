@@ -15,18 +15,18 @@ export interface Post {
 export class AppComponent implements OnInit {
   posts: Post[] = [
     {title: 'Хочу выучить Angular', text: 'Я все еще учу Angular', id: 1},
-    // {title: 'Хочу выучить следующий блок', text: 'Я почти начал его учить',id:2},
+    {title: 'Хочу выучить следующий блок', text: 'Я почти начал его учить',id:2},
   ];
 
   ngOnInit() {
-    setTimeout(()=>{
-      console.log('Timeout');
-      this.posts[0] ={
-        title : 'Changed',
-        text: 'Some text',
-        id: 33
-      }
-    }, 5000)
+    // setTimeout(()=>{
+    //   console.log('Timeout');
+    //   this.posts[0] ={
+    //     title : 'Changed',
+    //     text: 'Some text',
+    //     id: 33
+    //   }
+    // }, 5000)
   }
 
   updatePosts(post: Post) {
