@@ -29,6 +29,10 @@ ng g c post --skipTests
 
 Создать директиву (generate directive) в папке directives
 ng g d directives/style3 --skipTests
+
+Создать пайп (generate pipe) в папке pipes
+ng g p pipes/ex-marks --skipTests
+
 ```
 ### Настройка git
 
