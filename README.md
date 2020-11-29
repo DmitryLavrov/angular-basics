@@ -23,8 +23,12 @@ npm start
 ---
 ### Команды Angular
 ```
+Создать компонент (generate component)
 ng g c post-form --skipTests
 ng g c post --skipTests
+
+Создать директиву (generate directive) в папке directives
+ng g d directives/style3 --skipTests
 ```
 ### Настройка git
 
