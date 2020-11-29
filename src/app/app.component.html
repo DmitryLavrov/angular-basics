@@ -1,17 +1,37 @@
 <div class="container">
   <h1>Hello Angular!!</h1>
 
-<p
-  appStyle="yellow"
-  fontWeight="bold"
-  [dStyle]="{border:'1px solid blue',borderRadius:'5px'}"
->Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, explicabo.
-</p>
-<p
-  appStyle="red"
-  fontWeight="bold"
-  [dStyle]="{border:'2px solid yellow',borderRadius:'15px'}"
->Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, explicabo.
-</p>
+  <p
+    appStyle="yellow"
+    fontWeight="bold"
+    [dStyle]="{border:'1px solid blue',borderRadius:'5px'}"
+  >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, explicabo.
+  </p>
+  <p
+    appStyle="red"
+    fontWeight="bold"
+    [dStyle]="{border:'2px solid yellow',borderRadius:'15px'}"
+  >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, explicabo.
+  </p>
+
+  <button class="btn" (click)="isVisible = !isVisible">Toggle</button>
+
+<!--  <div *ngIf="isVisible" class="wrap">-->
+<!--    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur doloremque, doloribus eos error libero minus-->
+<!--      molestiae nam quae quisquam suscipit.</p>-->
+<!--  </div>-->
+
+<!--  <ng-template [ngIf]="isVisible">-->
+<!--    <div class="wrap">-->
+<!--      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur doloremque, doloribus eos error libero-->
+<!--        minus molestiae nam quae quisquam suscipit.</p>-->
+<!--    </div>-->
+<!--  </ng-template>-->
+
+  <div *appIfNot="!isVisible" class="wrap">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur doloremque, doloribus eos error libero minus
+      molestiae nam quae quisquam suscipit.</p>
+  </div>
+
 </div>
 
