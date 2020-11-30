@@ -20,5 +20,12 @@ export class AppComponent {
     {title: 'Текст 2', text: 'Текст 1'},
     {title: 'Заголовок 3', text: 'Заголовок 2'},
   ]
+
+  addPost(){
+    this.posts.unshift({
+      title: 'Новый пост',
+      text: 'Текст для нового поста'
+    })
+  }
 }
 
