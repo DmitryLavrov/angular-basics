@@ -33,6 +33,9 @@ ng g d directives/style3 --skipTests
 Создать пайп (generate pipe) в папке pipes
 ng g p pipes/ex-marks --skipTests
 
+Создать сервис (generate srevice) в папке services
+ng g s services/local-counter --skipTests
+
 ```
 ### Настройка git
 
