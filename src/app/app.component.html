@@ -1,11 +1,11 @@
 <div class="container">
   <h1>Hello Angular!!</h1>
 
-  <p>Wait for it ... {{ p | async }}</p>
+ <div class="card">
+   <h2>App Counter: {{appCounterService.counter}}</h2>
 
-  <p>Date: {{ date$ | async | date: 'hh:mm:ss dd/MM/yyyy' }}</p>
-
-<!--  <p>Date: {{ date | date: 'hh:mm:ss dd/MM/yyyy' }}</p>-->
-
+   <button class="btn" (click)="appCounterService.increase()">+</button>
+   <button class="btn" (click)="appCounterService.decrease()">-</button>
+ </div>
 </div>
 
