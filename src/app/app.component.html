@@ -19,6 +19,9 @@
         <small *ngIf="form.get('email').errors.restrictedEmail">
           Введен запрещенный email {{form.get('email').value}}
         </small>
+        <small *ngIf="form.get('email').errors.uniqEmail">
+          Уже зарегистрирован email {{form.get('email').value}}
+        </small>
       </div>
     </div>
 
@@ -72,7 +75,7 @@
       </div>
     </div>
 
-    <button class="btn" type="submit" [disabled]="form.invalid">Отправить</button>
+    <button class="btn" type="submit" [disabled]="form.invalid || form.pending">Отправить</button>
 
   </form>
 </div>
