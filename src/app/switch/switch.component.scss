@@ -1,0 +1,17 @@
+
+div {
+  display: inline;
+
+  button {
+    padding: .5rem;
+    font-size: 1rem;
+    color: gray;
+    background: darkgray;
+    border: none;
+    outline: none;
+
+    &.active {
+      background: lightgreen;
+    }
+  }
+}
