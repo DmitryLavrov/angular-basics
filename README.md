@@ -5,9 +5,13 @@
 ### Технологии:
 
 - [Фреймворк Angular](https://angular.io)
-
 ---
-
+### Дополнительные ресурсы:
+- [JSONPlaceholder](http://jsonplaceholder.typicode.com/)
+```
+https://jsonplaceholder.typicode.com/todos?_limit=2
+  get-запрос на 2 фейковые записи из базы todos
+```
 ### Установка проекта:
 
 ```
@@ -17,7 +21,6 @@ ng new angular-basics
 cd angular-basics/
 npm start
   получаем: Angular Live Development Server is listening on localhost:4200
-
 ```
 
 ---
@@ -35,7 +38,6 @@ ng g p pipes/ex-marks --skipTests
 
 Создать сервис (generate srevice) в папке services
 ng g s services/local-counter --skipTests
-
 ```
 ### Настройка git
 

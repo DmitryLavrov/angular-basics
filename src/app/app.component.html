@@ -1,14 +1,28 @@
 <div class="container">
-  <h1>Angular ngModels</h1>
+  <h1>Angular HttpClient</h1>
 
-  <app-switch
-    [(ngModel)]="appState"
-    (ngModelChange)="handleChange()"
-  ></app-switch>
+  <div class="card">
+    <div class="form-control">
+      <label>
+        <input type="text" placeholder="Название">
+      </label>
+    </div>
+    <button class="btn">Добавить</button>
+    <button class="btn">Загрузить</button>
+  </div>
 
   <hr>
 
-  <p>AppState: {{appState}}</p>
+  <div class="card" *ngFor="let todo of todos">
+    <p>
+      <span [class.completed]="todo.completed">{{todo.title | titlecase}}</span>
+      <span>
+        <button class="btn btn-danger">Удалить</button>
+        <button class="btn" [disabled]="todo.completed">Завершить</button>
+      </span>
+    </p>
+  </div>
+
 </div>
 
 
