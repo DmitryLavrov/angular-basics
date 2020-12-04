@@ -57,6 +57,8 @@ export class AppComponent implements OnInit {
   completeTodo(id: number) {
     this.todosService.completeTodo(id)
       .subscribe(todo => {
+        console.log('todo:', todo);
+        todo = JSON.parse(todo)
         this.todos.find(t => t.id === id).completed = todo.completed
       })
   }
