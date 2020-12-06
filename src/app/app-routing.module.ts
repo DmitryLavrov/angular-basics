@@ -7,6 +7,7 @@ import {PostComponent} from './post/post.component';
 import {AboutExtraComponent} from './about-extra/about-extra.component';
 import {ErrorPageComponent} from './error-page/error-page.component';
 import {AuthGuard} from './auth-guard';
+import {PostResolver} from './post.resolver';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -14,7 +15,12 @@ const routes: Routes = [
       {path: 'extra', component: AboutExtraComponent}
     ]},
   {path: 'posts', component: PostsComponent, canActivate: [AuthGuard]},
-  {path: 'post/:id', component: PostComponent},
+  {path: 'post/:id',
+    component: PostComponent,
+    resolve: {
+    post: PostResolver
+    }
+  },
   {path: 'error', component: ErrorPageComponent},
   {path: '**', redirectTo: '/error'}
 ]
