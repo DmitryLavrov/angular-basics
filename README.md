@@ -21,6 +21,13 @@ ng new angular-basics
 cd angular-basics/
 npm start
   получаем: Angular Live Development Server is listening on localhost:4200
+
+Установить http-server (глобально) - для запуска продакшен  
+npm i -g http-server
+
+Запустить http-server (порт 8080) в папке продакшен
+cd dist/angular-basics/
+http-server -p 8080
 ```
 
 ---
@@ -38,6 +45,12 @@ ng g p pipes/ex-marks --skipTests
 
 Создать сервис (generate srevice) в папке services
 ng g s services/local-counter --skipTests
+
+Превратить приложение в PWA (Прогрессивное web-приложение)
+ng add @angular/pwa
+
+Сгенерировать продакшен в папке dist
+ng build --prod
 ```
 ### Настройка git
 
