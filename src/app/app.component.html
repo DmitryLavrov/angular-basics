@@ -1,3 +1,5 @@
+<ng-template appRef></ng-template>
+
 <nav class="navbar">
   <h1>Angular Dynamic components</h1>
 </nav>
@@ -7,13 +9,13 @@
 
     <h1>Some content</h1>
 
-    <button class="btn" (click)="modal = true">Show modal</button>
+    <button class="btn" (click)="showModal()">Show modal</button>
 
-    <app-modal
-      *ngIf="modal"
-      title="Modal window"
-      (close)="modal = false"
-    ></app-modal>
+<!--    <app-modal-->
+<!--      *ngIf="modal"-->
+<!--      title="Modal window"-->
+<!--      (close)="modal = false"-->
+<!--    ></app-modal>-->
 
   </div>
 </div>

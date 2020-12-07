@@ -10,8 +10,9 @@
 .modal {
   padding: 1rem;
   background: #fff;
-  margin-top: 3rem;
+  //margin-top: 3rem;
   position: absolute;
   left: 50%;
-  transform: translate(-50%, 0);
+  top: 50%;
+  transform: translate(-50%,-50%);
 }
