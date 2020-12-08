@@ -1,27 +1,14 @@
-import {Component, EventEmitter, Output} from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {Component} from "@angular/core";
 
 @Component({
   selector: 'app-counter',
-  template: 'Counter {{counter}}'
+  templateUrl: './counter.component.html'
 })
-
 export class CounterComponent {
   counter = 0
-  public form: FormGroup
-
-  @Output() counterEmitter = new EventEmitter<number>()
-
-  constructor(private fb: FormBuilder) {
-    this.form = fb.group({
-      login: ['', Validators.required],
-      email: ['']
-    })
-  }
 
   increment() {
     this.counter++
-    this.counterEmitter.emit(this.counter)
   }
 
   decrement() {

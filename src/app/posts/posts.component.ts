@@ -20,7 +20,7 @@ export class PostsComponent implements OnInit {
 
   add(title: string) {
     const post = { title }
-    this.service.create(post).subscribe((p) => {
+    this.service.create(post).subscribe(p => {
       this.posts.push(p)
     }, err => this.message = err)
   }
