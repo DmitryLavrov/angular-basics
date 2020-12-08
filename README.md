@@ -51,6 +51,9 @@ ng add @angular/pwa
 
 Сгенерировать продакшен в папке dist
 ng build --prod
+
+Просмотр покрытия тестами (результат в папке coverage)
+ng test --code-coverage
 ```
 ### Настройка git
 
