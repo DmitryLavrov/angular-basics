@@ -9,7 +9,7 @@ export class PostsComponent implements OnInit {
   posts = []
   message: string
 
-  constructor(private service: PostsService) {
+  constructor(public service: PostsService) {
   }
 
   ngOnInit(): void {
