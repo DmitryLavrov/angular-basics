@@ -27,4 +27,18 @@ describe('CounterComponent', () => {
     const el: HTMLElement = de.nativeElement
     expect(el.textContent).toContain(num.toString())
   });
+
+  it('should add class .green if counter is even', function() {
+    component.counter = 6
+    fixture.detectChanges()
+    const de = fixture.debugElement.query(By.css('.counter'))
+    const el: HTMLElement = de.nativeElement
+    expect(el.classList.contains('green')).toBeTruthy()
+  });
+
+  it('should increment counter if increment button was clicked', function() {
+    let btn = fixture.debugElement.query(By.css('#increment'))
+    btn.triggerEventHandler('click', null)
+    expect(component.counter).toBe(1)
+  });
 })
