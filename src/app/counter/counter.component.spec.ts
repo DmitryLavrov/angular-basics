@@ -19,4 +19,11 @@ describe('CounterComponent', () => {
     component.decrement()
     expect(component.counter).toBe(-1)
   })
+
+  it('should send value by event emitter', () =>{
+    let result = null
+    component.counterEmitter.subscribe(value => {result = value})
+    component.increment()
+    expect(result).toBe(1)
+  })
 })
