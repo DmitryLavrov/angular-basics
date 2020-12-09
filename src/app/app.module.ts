@@ -8,6 +8,7 @@ import {PostsComponent} from "./posts/posts.component";
 import { RoutingComponent } from './routing/routing.component';
 import {RouterModule} from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ColorDirective } from './directives/color.directive';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     PostsComponent,
     RoutingComponent,
     NavbarComponent,
+    ColorDirective,
   ],
   imports: [
     BrowserModule,
