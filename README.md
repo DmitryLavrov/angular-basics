@@ -58,10 +58,7 @@ ng test --code-coverage
 ### Настройка git
 
 ```
-git init
-git add .
-git commit -m "Первый комментарий"
-git remote add origin git@github.com:DmitryLavrov/nodejs-express.git
+git remote add origin git@github.com:DmitryLavrov/angular-basics.git
 git branch -M main
 git push -u origin main
 ```
