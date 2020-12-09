@@ -3,14 +3,16 @@
 <button class="btn" (click)="visible = !visible">Toggle visible</button>
 <hr/>
 
-<div class="wrap">
-  <div
-    class="box"
-    *ngIf="visible"
-    [@box]="boxState"
-    (@box.start)="animationStarted($event)"
-    (@box.done)="animationDone($event)"
-  >
-    <h4>{{boxState | uppercase}}</h4>
-  </div>
-</div>
+<!--<div class="wrap">-->
+<!--  <div-->
+<!--    class="box"-->
+<!--    *ngIf="visible"-->
+<!--    [@box]="boxState"-->
+<!--    (@box.start)="animationStarted($event)"-->
+<!--    (@box.done)="animationDone($event)"-->
+<!--  >-->
+<!--    <h4>{{boxState | uppercase}}</h4>-->
+<!--  </div>-->
+<!--</div>-->
+
+<app-animate></app-animate>
