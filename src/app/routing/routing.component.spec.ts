@@ -4,6 +4,7 @@ import { Subject} from 'rxjs';
 import {ActivatedRoute, Params, Router, RouterOutlet} from '@angular/router';
 import {By} from '@angular/platform-browser';
 import {RouterTestingModule} from '@angular/router/testing';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 class RouterStab {
   navigate(path: string[]) {}
@@ -32,7 +33,8 @@ describe('RoutingComponent', () => {
       providers: [
         {provide: Router, useClass: RouterStab},
         {provide: ActivatedRoute, useClass: ActivatedRouteStab}
-      ]
+      ],
+      schemas: [NO_ERRORS_SCHEMA]
     })
 
     fixture = TestBed.createComponent(RoutingComponent);
