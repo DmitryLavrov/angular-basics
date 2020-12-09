@@ -1,7 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RoutingComponent } from './routing.component';
 import { Subject} from 'rxjs';
-import {ActivatedRoute, Params, Router} from '@angular/router';
+import {ActivatedRoute, Params, Router, RouterOutlet} from '@angular/router';
+import {By} from '@angular/platform-browser';
+import {RouterTestingModule} from '@angular/router/testing';
 
 class RouterStab {
   navigate(path: string[]) {}
@@ -26,6 +28,7 @@ describe('RoutingComponent', () => {
   beforeEach( () => {
     TestBed.configureTestingModule({
       declarations: [ RoutingComponent ],
+      imports: [RouterTestingModule],
       providers: [
         {provide: Router, useClass: RouterStab},
         {provide: ActivatedRoute, useClass: ActivatedRouteStab}
@@ -56,5 +59,10 @@ describe('RoutingComponent', () => {
     route.push({id: '0'})
 
     expect(spy).toHaveBeenCalledWith(['/404'])
+  });
+
+  it('should have router-outlet directive', function() {
+    const de = fixture.debugElement.query(By.directive(RouterOutlet))
+    expect(de).not.toBeNull()
   });
 });
